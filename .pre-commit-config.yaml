@@ -56,6 +56,12 @@ repos:
         language: system
         types: [python]
 
+      - id: clear-notebook-outputs
+        name: Clear Jupyter Notebook Outputs
+        entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace --execute --to notebook --allow-errors
+        language: system
+        types: [python]
+
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
     rev: v8.0.0

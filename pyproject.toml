@@ -26,6 +26,7 @@ radon = "^4.1.0"
 pylint = "^2.11.1"
 pandas-stubs = "^1.1.0"
 coverage = "^5.5"
+nbconvert = "^6.2.0"
 
 [tool.mypy]
 ignore_missing_imports = true
