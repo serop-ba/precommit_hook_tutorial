@@ -27,7 +27,7 @@ repos:
         language: system
         types: [python]
       - id: coverage
-        name: coverage report
+        name: coverage-report
         entry: coverage run
         language: system
         types: [python]
@@ -57,7 +57,7 @@ repos:
         types: [python]
 
       - id: clear-notebook-outputs
-        name: Clear Jupyter Notebook Outputs
+        name: jupyter-notebooks
         entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace notebooks/*.ipynb
         language: system
         types: [python]
@@ -79,9 +79,9 @@ repos:
       - id: yamllint
         files: ".github"  # TODO: Enable for all .yaml, .yml files in repo
 
-  # - repo: https://github.com/sqlfluff/sqlfluff
-  #   rev: 1.3.0
-  #   hooks:
-  #     - id: sqlfluff-lint
-  #       args: [--disable_progress_bar]  # progress bar pollutes GH actions
-  #       files: SQL
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 1.3.0
+    hooks:
+      - id: sqlfluff-lint
+        args: [--disable_progress_bar]  # progress bar pollutes GH actions
+        files: SQL
