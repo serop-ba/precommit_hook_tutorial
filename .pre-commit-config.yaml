@@ -61,6 +61,7 @@ repos:
         entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace notebooks/*.ipynb
         language: system
         types: [python]
+        files: \.ipynb$
 
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
