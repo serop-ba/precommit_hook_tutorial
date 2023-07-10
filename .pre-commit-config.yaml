@@ -17,7 +17,7 @@ repos:
 
       - id: mypy
         name: mypy
-        entry: mypy my_app
+        entry: mypy
         language: system
         types: [python]
 
