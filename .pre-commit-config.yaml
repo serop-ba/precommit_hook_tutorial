@@ -1,3 +1,5 @@
+default_install_hook_types: [commit-msg, pre-commit]
+fail_fast: false
 repos:
   - repo: local
     hooks:
@@ -21,14 +23,14 @@ repos:
 
       - id: pytest
         name: pytest
-        entry: pytest
+        entry: pytest .
         language: system
         types: [python]
-      # - id: coverage
-      #   name: coverage report
-      #   entry: pytest --cov-report term --cov=my_app test/
-      #   language: system
-      #   types: [python]
+      - id: coverage
+        name: coverage report
+        entry: coverage run
+        language: system
+        types: [python]
 
       # - id: bandit
       #   name: bandit
@@ -42,11 +44,11 @@ repos:
         language: system
         types: [python]
 
-      # - id: pylint
-      #   name: pylint
-      #   entry: pylint .
-      #   language: system
-      #   types: [python]
+      - id: pylint
+        name: pylint
+        entry: pylint .
+        language: system
+        types: [python]
 
       - id: radon-cc
         name: radon-cc

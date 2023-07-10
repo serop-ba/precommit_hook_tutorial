@@ -1,0 +1,7 @@
+{
+    "extends": ["@commitlint/config-conventional"],
+    "plugins": ["@ngx-devs/commitlint-plugin-imperative"],
+    "rules": {
+        "imperative-rule/en": [2, "always"]
+    }
+}
