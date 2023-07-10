@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 
 
 def get_predictions() -> ndarray:
-    """Computes the predictions for dummy data using linear regression model.
+    """Computes the predictions for dummy data using linear regression model..
 
     Returns
     -------
