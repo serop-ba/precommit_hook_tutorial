@@ -58,7 +58,7 @@ repos:
 
       - id: clear-notebook-outputs
         name: Clear Jupyter Notebook Outputs
-        entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace --execute --to notebook --allow-errors
+        entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace notebooks/*.ipynb
         language: system
         types: [python]
 
