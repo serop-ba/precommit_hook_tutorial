@@ -24,11 +24,13 @@ repos:
       - id: pytest
         name: pytest
         entry: pytest .
+        stages: [push]
         language: system
         types: [python]
       - id: coverage
         name: coverage-report
         entry: coverage run
+        stages: [push]
         language: system
         types: [python]
 
@@ -61,7 +63,7 @@ repos:
         entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace notebooks/*.ipynb
         language: system
         types: [python]
-        files: ".ipynb"
+        files: notebooks
 
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
