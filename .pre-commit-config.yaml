@@ -15,11 +15,11 @@ repos:
         language: system
         types: [python]
 
-      # - id: mypy
-      #   name: mypy
-      #   entry: mypy my_app
-      #   language: system
-      #   types: [python]
+      - id: mypy
+        name: mypy
+        entry: mypy my_app
+        language: system
+        types: [python]
 
       - id: pytest
         name: pytest
