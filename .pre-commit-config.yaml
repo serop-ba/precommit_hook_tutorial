@@ -32,11 +32,11 @@ repos:
         language: system
         types: [python]
 
-      # - id: bandit
-      #   name: bandit
-      #   entry: bandit -r .
-      #   language: system
-      #   types: [python]
+      - id: bandit
+        name: bandit
+        entry: bandit -r .
+        language: system
+        types: [python]
 
       - id: isort
         name: isort
