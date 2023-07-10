@@ -60,10 +60,10 @@ repos:
 
       - id: clear-notebook-outputs
         name: jupyter-notebooks
-        entry: jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace notebooks/*.ipynb
+        files: \.ipynb$
+        stages: [commit]
         language: system
-        types: [python]
-        files: notebooks
+        entry:  python -m nbconvert --ClearOutputPreprocessor.enabled=True --inplace
 
 
   - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
